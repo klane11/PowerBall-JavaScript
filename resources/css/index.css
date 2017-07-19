@@ -18,6 +18,13 @@ body {
     max-width: 1024px;
     margin: 0 auto;
 }
+.game-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 30px;
+}
+.game-title span {
+    color: red;
+}
 .game-play {
     max-width: 1024;
     margin: 0 auto;
@@ -81,6 +88,10 @@ body {
     }
     .logo img {
         height: 30px;
+    }
+    .game-overview {
+        max-width: 100%;
+        margin: 15px;
     }
 
     .box,

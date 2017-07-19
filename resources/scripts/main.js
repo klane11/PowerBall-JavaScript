@@ -22,49 +22,61 @@
 
 // stop when all 5 slots are filled --> then do next two slots of numbers
 
+
+// ***************************
+// 3
 function getButton(){
     var button = document.querySelector("button");
     // var buttonArray = [].slice.call(button)
     return button;
 };
+
+// ***************************
 //2
 function clickButton(min, max){
     var clickMeBtn = getButton();
     clickMeBtn.addEventListener("click", function (event) {
         event.preventDefault();
         getNumberSlot(min, max);
+        getPowerBallSlot();
     });
 };
-// generate array with 5 random numbers
-        // event.target.textContent = getRandomFirstNumbers(min, max);
-function getRandomFirstNumbers(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-    // returns random number between min and max (ex 1, 69)
-};
 
-
-
-    // have all number slots (h1)
-    // have a random number generated
-    // print number to HTML
-    // return number;
+// ***************************
+//4
 function getNumberSlot(min, max){
     var numberSlots = document.querySelectorAll("[data-text-role='number']");
     var numberArray = numberArrayMaker(min, max)
     numberSlots.forEach(function(slot, i){
         numberSlots[i].textContent = numberArray[i];
-        // randomNumber[i]
     });
 }
-//1
-clickButton(1, 69);
 
-
-
+// 5
 function numberArrayMaker(min, max){
     numberArray = [];
     for (var i = 0; i < 5; i++){
         numberArray.push(getRandomFirstNumbers(min, max));
     }
-    return numberArray
+    return numberArray;
 }
+
+
+// 6
+function getRandomFirstNumbers(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    // returns random number between min and max (ex 1, 69)
+};
+
+//7
+function getPowerBallSlot(){
+    var powerballSlot = document.querySelector("[data-text-role='powerball-number']");
+    powerballSlot.textContent = getRandomFirstNumbers(1, 26);
+    };
+
+
+
+
+
+//1
+clickButton(1, 69);
