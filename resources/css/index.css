@@ -1,0 +1,25 @@
+.logo img{
+    height: 50px;
+}
+
+.top-background {
+    height: 500px;
+    background-image: url("../images/powerball-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px){
+    .top-background {
+        height: 250px;
+    }
+
+
+}
