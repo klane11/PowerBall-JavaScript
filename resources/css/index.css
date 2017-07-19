@@ -37,6 +37,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 .powerball-container h1 {
     margin: 0;
@@ -47,8 +48,8 @@ body {
 
 .box,
 .powerball-box {
-    height: 125px;
-    width: 125px;
+    height: 8rem;
+    width: 8rem;
     border: 1px solid grey;
     margin: 10px;
     text-align: center;
@@ -62,12 +63,15 @@ body {
     color: black;
 }
 .powerball-box {
-     background-color: red; 
+    background-color: red; 
     color: white;
 }
 
 
-
+.footer-container {
+    height: 200px;
+    background-color: ghostwhite;
+}
 
 
 
@@ -78,5 +82,14 @@ body {
     .logo img {
         height: 30px;
     }
+
+    .box,
+    .powerball-box {
+        height: 6rem;
+        width: 6rem;
+        font-size: 25px;
+        margin: 5px;
+    }
+
 
 }
