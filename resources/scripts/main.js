@@ -27,16 +27,15 @@ function getButton(){
     // var buttonArray = [].slice.call(button)
     return button;
 };
-
+//2
 function clickButton(min, max){
     var clickMeBtn = getButton();
     clickMeBtn.addEventListener("click", function (event) {
         event.preventDefault();
-        var randomNumber = getRandomFirstNumbers(min, max);
-        getNumberSlot(randomNumber);
+        getNumberSlot(min, max);
     });
 };
-
+// generate array with 5 random numbers
         // event.target.textContent = getRandomFirstNumbers(min, max);
 function getRandomFirstNumbers(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -45,14 +44,27 @@ function getRandomFirstNumbers(min, max) {
 
 
 
-function getNumberSlot(randomNumber){
     // have all number slots (h1)
     // have a random number generated
-    var numberSlots = document.querySelectorAll("[data-text-role='number']");
     // print number to HTML
-    numberSlots.textContent.forEach(
-        numberSlots[0].textContent = randomNumber);
     // return number;
+function getNumberSlot(min, max){
+    var numberSlots = document.querySelectorAll("[data-text-role='number']");
+    var numberArray = numberArrayMaker(min, max)
+    numberSlots.forEach(function(slot, i){
+        numberSlots[i].textContent = numberArray[i];
+        // randomNumber[i]
+    });
 }
-
+//1
 clickButton(1, 69);
+
+
+
+function numberArrayMaker(min, max){
+    numberArray = [];
+    for (var i = 0; i < 5; i++){
+        numberArray.push(getRandomFirstNumbers(min, max));
+    }
+    return numberArray
+}

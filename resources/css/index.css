@@ -90,6 +90,18 @@ body {
         font-size: 25px;
         margin: 5px;
     }
+}
 
-
+@media only screen and (max-width: 600px){
+    .powerball-container {
+        justify-content: space-around;
+    }
+    
+    .box,
+    .powerball-box {
+        height: 4rem;
+        width: 4rem;
+        font-size: 15px;
+        margin: 2px;
+    }
 }
