@@ -1,5 +1,6 @@
 .logo img{
     height: 50px;
+    padding: 10px;
 }
 
 .top-background {
@@ -10,6 +11,36 @@
     background-size: cover;
 }
 
+.powerball-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.powerball-container h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box,
+.powerball-box {
+    height: 90px;
+    width: 90px;
+    border: 1px solid grey;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.box {
+    background-color: lightgrey;
+    color: black;
+}
+.powerball-box {
+    background-color: red;
+    color: white;
+}
 
 
 
@@ -20,6 +51,8 @@
     .top-background {
         height: 250px;
     }
-
+    .logo img {
+        height: 30px;
+    }
 
 }
