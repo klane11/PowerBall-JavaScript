@@ -1,17 +1,6 @@
 // first set of numbers range from 1-69. there are 5 slots to be filled and the numbers cannot repeat
 // second set of numbers range from 1-26. there are 2 slots to be filled and the numbers cannot repeat
 
-
-
-
-
-
-
-
-
-
-
-
 // 5 slots
 // user must press button to innitiate thing (event listener)
 // generage a random number between 1-69  (math.round)

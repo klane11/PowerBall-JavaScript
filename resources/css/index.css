@@ -8,7 +8,7 @@ body {
 }
 
 .top-background {
-    height: 500px;
+    height: 400px;
     background-image: url("../images/powerball-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -16,14 +16,23 @@ body {
 }
 .game-overview {
     max-width: 1024px;
-    margin: 0 auto;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .game-title {
     font-family: 'Kanit', sans-serif;
     font-size: 30px;
 }
+.game-title h1 {
+    margin: 10px;
+}
 .game-title span {
     color: red;
+}
+.game-rules {
+    width: 400px;
 }
 .game-play {
     max-width: 1024;
@@ -36,7 +45,7 @@ body {
     border-radius: 10%;
     background-color: red;
     color: white;
-    margin: 30px;
+    margin: 40px;
 }
 
 .powerball-container {
@@ -44,7 +53,7 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 .powerball-container h1 {
     margin: 0;
@@ -78,7 +87,12 @@ body {
 .footer-container {
     height: 200px;
     background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 
 
 
@@ -92,6 +106,7 @@ body {
     .game-overview {
         max-width: 100%;
         margin: 15px;
+        flex-direction: column;
     }
 
     .box,
@@ -107,12 +122,18 @@ body {
     .powerball-container {
         justify-content: space-around;
     }
-    
+    .game-rules {
+        width: 100%;
+        margin-left: 10px;
+    }
     .box,
     .powerball-box {
         height: 4rem;
         width: 4rem;
         font-size: 15px;
         margin: 2px;
+    }
+    .footer-info {
+        font-size: 13px;
     }
 }
