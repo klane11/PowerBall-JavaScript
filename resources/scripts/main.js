@@ -25,7 +25,7 @@ function getButton(){
 function clickButton(min, max){
     var clickMeBtn = getButton();
     clickMeBtn.addEventListener("click", function (event) {
-        event.preventDefault();
+        // event.preventDefault();
         getNumberSlot(min, max);
         getPowerBallSlot();
     });
