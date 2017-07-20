@@ -47,13 +47,18 @@ body {
     font-weight: bold;
     padding: 10px 30px;
     border-radius: 10%;
-    box-shadow: -5px 3px 10px #000000;
+    box-shadow: -2px 3px 10px #000000;
     background-color: red;
     margin: 40px;
-    transition: all .75s;
+    transition: all .25s;
+    outline: none;
 }
-.click-me:hover {
-    background-color: black;
+ .click-me:hover {
+    background-color: darkred;
+} 
+.click-me:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .powerball-container {
