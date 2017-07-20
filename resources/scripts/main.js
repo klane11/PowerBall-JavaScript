@@ -23,14 +23,26 @@ function getButton(){
 // ***************************
 //2
 function clickButton(min, max){
+    var counter = 1;
     var $clickMeBtn = getButton();
     $clickMeBtn.click(function (event) {
         // event.preventDefault();
+        moveBall(counter);
+        counter++;
         getNumberSlot(min, max);
         getPowerBallSlot();
+        
     });
 };
 
+
+function moveBall(counter) {
+    var degree = 720 * counter;
+    // $('.ball-container').css({'transform': 'rotate(0deg)', 'transition': '2s'});
+    $('.ball-container').css(
+        {'transform': 'rotate(' + degree + 'deg)',
+         'transition': '2s'});
+}
 // ***************************
 //4
 function getNumberSlot(min, max){
@@ -52,7 +64,6 @@ function numberArrayMaker(min, max){
             i--;
         }
     }
-    console.log(numberArray)
     return numberArray;
 }
 
@@ -75,6 +86,3 @@ function getPowerBallSlot(){
 
 //1
 clickButton(1, 69);
-
-
-

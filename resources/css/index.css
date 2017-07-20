@@ -67,7 +67,13 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
+    /* transform: rotate(0deg);
+    transition: all 2s; */
 }
+/* .powerball-container:hover {
+    transform: rotate(720deg);
+} */
+
 .powerball-container h1 {
     margin: 0;
     padding: 0;
@@ -85,14 +91,30 @@ body {
     font-size: 35px;
     border-radius: 50%;
     box-shadow: inset 5px -3px 25px #000000;
+    animation-name: slidein;
+    animation-duration: 4s;
+    animation-timing-function: linear;  
+    /* transform: rotate(0deg);
+    transition: all 2s; */
 }
+@keyframes slidein {
+  from {
+    transform: rotate(-1440deg);
+    margin-left: -1500px;
+  }
+  to {
+    transform: rotate(0deg);
+    margin-left: 0%;
+  }
+}
+
 
 .box {
     background-color: ghostwhite;
     color: black;
 }
 .powerball-box {
-    background-color: red; 
+    background-color: red;
     color: white;
 }
 
