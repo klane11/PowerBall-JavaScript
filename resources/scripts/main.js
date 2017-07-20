@@ -43,9 +43,14 @@ function getNumberSlot(min, max){
 
 // 5
 function numberArrayMaker(min, max){
-    numberArray = [];
+    var numberArray = [];
     for (var i = 0; i < 5; i++){
-        numberArray.push(getRandomFirstNumbers(min, max));
+        var randomNumber = (getRandomFirstNumbers(min, max));
+        if (numberArray.indexOf(randomNumber) === -1){
+            numberArray.push(randomNumber);
+        } else {
+            i--;
+        }
     }
     return numberArray;
 }
@@ -69,3 +74,6 @@ function getPowerBallSlot(){
 
 //1
 clickButton(1, 69);
+
+
+
