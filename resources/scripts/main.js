@@ -1,9 +1,9 @@
 // first set of numbers range from 1-69. there are 5 slots to be filled and the numbers cannot repeat
-// second set of numbers range from 1-26. there are 2 slots to be filled and the numbers cannot repeat
+// second set of numbers range from 1-26. there is 1 to be filled.
 
 // 5 slots
 // user must press button to innitiate thing (event listener)
-// generage a random number between 1-69  (math.round)
+// generage a random number between 1-69  (math.random)
 // choose one at a time and enter them into the html shown to user (probably using textContent property) 
 // want to replace h1 with random number generated
 // as loops through and fills slots on html: 
@@ -15,29 +15,41 @@
 // ***************************
 // 3
 function getButton(){
-    var button = document.querySelector("button");
+    var $button = $("button");
     // var buttonArray = [].slice.call(button)
-    return button;
+    return $button;
 };
 
 // ***************************
 //2
 function clickButton(min, max){
-    var clickMeBtn = getButton();
-    clickMeBtn.addEventListener("click", function (event) {
+    var counter = 1;
+    var $clickMeBtn = getButton();
+    $clickMeBtn.click(function (event) {
         // event.preventDefault();
+        moveBall(counter);
+        counter++;
         getNumberSlot(min, max);
         getPowerBallSlot();
+        
     });
 };
 
+
+function moveBall(counter) {
+    var degree = 720 * counter;
+    // $('.ball-container').css({'transform': 'rotate(0deg)', 'transition': '2s'});
+    $('.ball-container').css(
+        {'transform': 'rotate(' + degree + 'deg)',
+         'transition': '2s'});
+}
 // ***************************
 //4
 function getNumberSlot(min, max){
-    var numberSlots = document.querySelectorAll("[data-text-role='number']");
+    var $numberSlots = $("[data-text-role='number']");
     var numberArray = numberArrayMaker(min, max)
-    numberSlots.forEach(function(slot, i){
-        numberSlots[i].textContent = numberArray[i];
+    $.each($numberSlots , function(i, slot){
+        $(this).text(numberArray[i]);
     });
 }
 
@@ -74,6 +86,3 @@ function getPowerBallSlot(){
 
 //1
 clickButton(1, 69);
-
-
-
